@@ -22,8 +22,9 @@
     .updated {
       background-color: #228B22;
       color: white;
-      padding: 10px 0;
+      padding: 12px 0;
       font-size: 16px;
+      text-align: center;
     }
 
     .content {
@@ -31,8 +32,26 @@
       text-align: center;
     }
 
-    .content h2 {
+    .card {
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+      padding: 30px;
+      margin: 20px auto;
+      max-width: 500px;
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 4px 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .card h2 {
       color: #006400;
+      margin-bottom: 10px;
     }
 
     footer {
@@ -56,15 +75,15 @@
 </div>
 
 <div class="content">
-  <section id="summer">
+  <div class="card" id="summer">
     <h2>ภาคฤดูร้อน พ.ศ. 2568</h2>
     <p>รายละเอียดเนื้อหาหรือวิชาที่เปิดสอนในภาคฤดูร้อน พ.ศ. 2568</p>
-  </section>
+  </div>
 
-  <section id="first" style="margin-top: 60px;">
+  <div class="card" id="first">
     <h2>ภาคต้น 2568</h2>
     <p>รายละเอียดเนื้อหาหรือวิชาที่เปิดสอนในภาคต้น 2568</p>
-  </section>
+  </div>
 </div>
 
 <footer>
