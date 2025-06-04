@@ -65,6 +65,7 @@
       text-align: center;
       font-family: "Kanit", Tahoma, sans-serif;
       display: flex;
+      flex-direction: column; /* ให้ข้อความในกล่องเรียงแนวตั้ง */
       align-items: center;
       justify-content: center;
       cursor: pointer;
@@ -80,12 +81,13 @@
       transform: translateY(2px);
     }
 
-    /* สไตล์คำว่า (หมดเวลา) สีแดง */
+    /* สไตล์คำว่า (หมดเวลา) สีแดง และแยกบรรทัด */
     .expired {
       color: red;
-      margin-left: 5px;
       font-weight: normal;
       font-size: 16px;
+      margin-top: 6px;
+      line-height: 1.2;
     }
 
     h2 {
@@ -154,13 +156,16 @@
 
   <div class="info-box-container">
     <div class="info-box" tabindex="0">
-      ชำระค่าธรรมเนียม <span class="expired">(หมดเวลา)</span>
+      ชำระค่าธรรมเนียม
+      <span class="expired">(หมดเวลา)</span>
     </div>
     <div class="info-box" tabindex="0">
-      ลงทะเบียนเรียน <span class="expired">(หมดเวลา)</span>
+      ลงทะเบียนเรียน
+      <span class="expired">(หมดเวลา)</span>
     </div>
     <div class="info-box" tabindex="0">
-      01403111-60 <span class="expired">(หมดเวลา)</span>
+      01403111-60
+      <span class="expired">(หมดเวลา)</span>
     </div>
     <div class="info-box" tabindex="0">
       เกรด
