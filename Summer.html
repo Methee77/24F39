@@ -50,7 +50,7 @@
       gap: 15px;
       margin: 15px auto 30px auto;
       max-width: 100%;
-      flex-wrap: nowrap; /* ไม่ตัดบรรทัด */
+      flex-wrap: nowrap;
     }
 
     .info-box {
@@ -78,6 +78,14 @@
     .info-box:active {
       box-shadow: inset 2px 2px 7px rgba(0,0,0,0.3);
       transform: translateY(2px);
+    }
+
+    /* สไตล์คำว่า (หมดเวลา) สีแดง */
+    .expired {
+      color: red;
+      margin-left: 5px;
+      font-weight: normal;
+      font-size: 16px;
     }
 
     h2 {
@@ -146,13 +154,13 @@
 
   <div class="info-box-container">
     <div class="info-box" tabindex="0">
-      ชำระค่าธรรมเนียม
+      ชำระค่าธรรมเนียม <span class="expired">(หมดเวลา)</span>
     </div>
     <div class="info-box" tabindex="0">
-      ลงทะเบียนเรียน
+      ลงทะเบียนเรียน <span class="expired">(หมดเวลา)</span>
     </div>
     <div class="info-box" tabindex="0">
-      01403111-60
+      01403111-60 <span class="expired">(หมดเวลา)</span>
     </div>
     <div class="info-box" tabindex="0">
       เกรด
