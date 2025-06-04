@@ -29,7 +29,6 @@
       margin-bottom: 10px;
     }
 
-    /* ประกาศกรอบสีน้ำเงิน */
     .announcement {
       max-width: 600px;
       margin: 10px auto 10px auto;
@@ -45,39 +44,35 @@
       box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
     }
 
-    /* ตัวห่อกรอบ 4 อันเรียงแนวนอน */
     .info-box-container {
       display: flex;
       justify-content: center;
-      gap: 20px; /* ระยะห่างระหว่างกรอบ */
+      gap: 15px;
       margin: 15px auto 30px auto;
       max-width: 100%;
-      flex-wrap: wrap; /* เวลาจอแคบจะลดลงบรรทัด */
+      flex-wrap: nowrap; /* ไม่ตัดบรรทัด */
     }
 
-    /* กรอบ 4 รายการ */
     .info-box {
-      background-color: #e6f0ff;
       border: 2px solid #004aad;
       border-radius: 12px;
-      width: 9.5cm;       /* ความกว้าง */
-      height: 7cm;        /* ความสูง */
-      padding: 20px 15px;
+      width: 200px;
+      height: 90px;
+      padding: 15px;
       color: #004aad;
       font-weight: bold;
-      font-size: 20px;
+      font-size: 18px;
       text-align: center;
       font-family: "Kanit", Tahoma, sans-serif;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
       cursor: pointer;
       user-select: none;
       transition: all 0.2s ease;
       box-sizing: border-box;
-      line-height: 1.5;
-      flex-shrink: 0; /* ไม่ย่อขนาดเมื่อเล็ก */
+      box-shadow: none;
+      background: transparent;
     }
 
     .info-box:active {
