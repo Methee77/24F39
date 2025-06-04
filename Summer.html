@@ -45,14 +45,23 @@
       box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
     }
 
-    /* กรอบ 4 รายการเล็กลง */
+    /* ตัวห่อกรอบ 4 อันเรียงแนวนอน */
+    .info-box-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px; /* ระยะห่างระหว่างกรอบ */
+      margin: 15px auto 30px auto;
+      max-width: 100%;
+      flex-wrap: wrap; /* เวลาจอแคบจะลดลงบรรทัด */
+    }
+
+    /* กรอบ 4 รายการ */
     .info-box {
       background-color: #e6f0ff;
       border: 2px solid #004aad;
       border-radius: 12px;
       width: 9.5cm;       /* ความกว้าง */
       height: 7cm;        /* ความสูง */
-      margin: 15px auto 30px auto;
       padding: 20px 15px;
       color: #004aad;
       font-weight: bold;
@@ -68,6 +77,7 @@
       transition: all 0.2s ease;
       box-sizing: border-box;
       line-height: 1.5;
+      flex-shrink: 0; /* ไม่ย่อขนาดเมื่อเล็ก */
     }
 
     .info-box:active {
@@ -126,7 +136,6 @@
     .back-link a:hover {
       text-decoration: underline;
     }
-
   </style>
 </head>
 <body>
@@ -140,17 +149,19 @@
     วันสุดท้ายของการส่งเกรด ไม่เกินเที่ยงคืนวันพฤหัสบดีที่ 12 มิ.ย. 68
   </div>
 
-  <div class="info-box" tabindex="0">
-    ชำระค่าธรรมเนียม
-  </div>
-  <div class="info-box" tabindex="0">
-    ลงทะเบียนเรียน
-  </div>
-  <div class="info-box" tabindex="0">
-    01403111-60
-  </div>
-  <div class="info-box" tabindex="0">
-    เกรด
+  <div class="info-box-container">
+    <div class="info-box" tabindex="0">
+      ชำระค่าธรรมเนียม
+    </div>
+    <div class="info-box" tabindex="0">
+      ลงทะเบียนเรียน
+    </div>
+    <div class="info-box" tabindex="0">
+      01403111-60
+    </div>
+    <div class="info-box" tabindex="0">
+      เกรด
+    </div>
   </div>
 
   <h2>คำอธิบายรายวิชา</h2>
