@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>ภาคฤดูร้อน พ.ศ. 2568 - F39-2</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
@@ -29,9 +29,10 @@
       margin-bottom: 10px;
     }
 
+    /* ประกาศกรอบสีน้ำเงิน */
     .announcement {
       max-width: 600px;
-      margin: 10px auto 30px auto;
+      margin: 10px auto 10px auto;
       background-color: #e6f0ff;
       border: 2px solid #004aad;
       border-radius: 8px;
@@ -39,41 +40,39 @@
       color: #004aad;
       font-weight: bold;
       text-align: center;
+      font-family: "Kanit", Tahoma, sans-serif;
       font-size: 20px;
       box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
     }
 
-    /* กล่องข้อมูล */
-    .info-box-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      margin: 30px auto;
-    }
-
+    /* กรอบ 4 รายการใหญ่ด้านล่าง */
     .info-box {
-      width: 12.84cm;
-      height: 14.12cm;
-      background-color: #ffffff;
+      background-color: #e6f0ff;
       border: 2px solid #004aad;
       border-radius: 12px;
-      padding: 20px;
-      font-size: 22px;
+      width: 12.84cm;       /* ความกว้าง */
+      height: 14.12cm;      /* ความสูง */
+      margin: 20px auto 40px auto;
+      padding: 25px 15px;
       color: #004aad;
       font-weight: bold;
+      font-size: 22px;
       text-align: center;
-      cursor: pointer;
-      box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
-      transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+      font-family: "Kanit", Tahoma, sans-serif;
       display: flex;
-      align-items: center;
+      flex-direction: column;
       justify-content: center;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.2s ease;
+      box-sizing: border-box;
+      line-height: 2.2;
     }
 
     .info-box:active {
-      transform: translateY(3px);
-      box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+      box-shadow: inset 2px 2px 7px rgba(0,0,0,0.3);
+      transform: translateY(2px);
     }
 
     h2 {
@@ -127,6 +126,7 @@
     .back-link a:hover {
       text-decoration: underline;
     }
+
   </style>
 </head>
 <body>
@@ -136,17 +136,21 @@
   <h1>ภาคฤดูร้อน พ.ศ. 2568</h1>
   <p style="text-align: center;">สาขาเกษตรและสิ่งแวดล้อมศึกษา ชั้นปีที่ 2 (F39-2)</p>
 
-  <!-- กล่องประกาศ -->
   <div class="announcement">
     วันสุดท้ายของการส่งเกรด ไม่เกินเที่ยงคืนวันพฤหัสบดีที่ 12 มิ.ย. 68
   </div>
 
-  <!-- กล่องข้อมูล 4 กล่อง -->
-  <div class="info-box-container">
-    <div class="info-box">ชำระค่าธรรมเนียม</div>
-    <div class="info-box">ลงทะเบียนเรียน</div>
-    <div class="info-box">01403111-60</div>
-    <div class="info-box">เกรด</div>
+  <div class="info-box" tabindex="0">
+    ชำระค่าธรรมเนียม
+  </div>
+  <div class="info-box" tabindex="0">
+    ลงทะเบียนเรียน
+  </div>
+  <div class="info-box" tabindex="0">
+    01403111-60
+  </div>
+  <div class="info-box" tabindex="0">
+    เกรด
   </div>
 
   <h2>คำอธิบายรายวิชา</h2>
