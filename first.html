@@ -1,5 +1,6 @@
 <section class="intro">
   <h1>ภาคต้น 2568 สาขาเกษตรและสิ่งแวดล้อมศึกษา ชั้นปีที่ 2 (F39-2)</h1>
+  <p id="countdown" style="margin-top: 1rem; font-size: 1.2rem;"></p>
 </section>
 
 <style>
@@ -63,3 +64,31 @@
   font-weight: bold;
 }
 </style>
+
+<script>
+  // กำหนดวันเวลาเปิดระบบ
+  const targetDate = new Date("2025-06-09T01:00:00+07:00").getTime();
+
+  const countdownElement = document.getElementById("countdown");
+
+  const updateCountdown = () => {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+
+    if (distance <= 0) {
+      countdownElement.innerHTML = "ระบบเปิดให้ใช้งานแล้ว";
+      clearInterval(timer);
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    countdownElement.innerHTML = `อยู่ระหว่างอัปเดตข้อมูล <br> จะเปิดระบบในอีก ${days} วัน ${hours} ชั่วโมง ${minutes} นาที ${seconds} วินาที`;
+  };
+
+  updateCountdown();
+  const timer = setInterval(updateCountdown, 1000);
+</script>
